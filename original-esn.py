@@ -1,14 +1,14 @@
+from numpy import *
+import scipy.linalg
+
 # http://minds.jacobs-university.de/sites/default/files/uploads/mantas/code/minimalESN.py.txt
 # -*- coding: utf-8 -*-
 """
 A minimalistic Echo State Networks demo with Mackey-Glass (delay 17) data
 in "plain" scientific Python.
-by Mantas LukoĹĄeviÄ?ius 2012
+by Mantas Lukoius 2012
 http://minds.jacobs-university.de/mantas
 """
-from numpy import *
-from matplotlib.pyplot import *
-import scipy.linalg
 
 # load the data
 trainLen = 2000
@@ -16,11 +16,7 @@ testLen = 2000
 initLen = 100
 
 data = loadtxt('MackeyGlass_t17.txt')
-
-# plot some of it
-figure(10).clear()
-plot(data[0:1000])
-title('A sample of data')
+print("loaded data")
 
 # generate the ESN reservoir
 inSize = outSize = 1
